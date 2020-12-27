@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>{{ title }}</h1>
+  <p v-if="isShowing" v-html="title2"></p>
+  <p v-else>{{title3}}</p>
+  <p>{{ title.toUpperCase() }}</p>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      title: "Hey Vue3",
+      title2: "<h1>I am from HTML</h1>",
+      title3: "I am from else",
+      isShowing: false,
+    };
+  },
+};
+</script>
+
+<!-- 
+<template>
+<h1>Dc Heros</h1>
+  <ul id="heros" class="demo">
+  <li v-for="hero in dcHeros" :key="hero">
+    {{ hero }}
+  </li>
+</ul>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+      dcHeros: ['SuperGirl', 'Flash', 'Batman', 'Superman'],
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+-->
