@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3 JS</title>
+    <script src="./vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+    </div>
+
+    <script>
+        const template = `<div>
+            <p>{{title}}</p>
+            <p>By</p>
+            <h1>{{name}}</h1>
+            </div>`;
+        const data = function data(){
+            return {
+                title: "Vue3 Tutorial",
+                name: "Sarthak",
+            };
+        };
+        const app = {data, template};
+        Vue.createApp(app).mount("#app");
+    </script>
+
+</body>
+</html>
