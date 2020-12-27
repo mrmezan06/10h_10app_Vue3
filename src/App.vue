@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <h1>{{ title }}</h1>
   <p v-if="isShowing" v-html="title2"></p>
   <p v-else>{{title3}}</p>
@@ -17,8 +17,7 @@ export default {
   },
 };
 </script>
-
-<!-- 
+-->
 <template>
 <h1>Dc Heros</h1>
   <ul id="heros" class="demo">
@@ -37,4 +36,3 @@ export default {
   }
 }
 </script>
--->
